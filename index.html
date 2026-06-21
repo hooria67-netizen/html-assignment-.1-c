@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HM Burger - Best Burgers in Town</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Header Navigation */
+        header {
+            width: 100%;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #e52d27; /* Fallback placeholder for red logo */
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" viewBox="0 0 24 24"><path d="M21 11c0-4.42-3.58-8-8-8S5 6.58 5 11h16zM3 13c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-1H3v1zm1 3c0 .55.45 1 1 1h14c.55 0 1-.45 1-1h-16zm2 3c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2h-12z"/></svg>') no-repeat center;
+            -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" viewBox="0 0 24 24"><path d="M21 11c0-4.42-3.58-8-8-8S5 6.58 5 11h16zM3 13c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-1H3v1zm1 3c0 .55.45 1 1 1h14c.55 0 1-.45 1-1h-16zm2 3c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2h-12z"/></svg>') no-repeat center;
+        }
+
+        .logo-text {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff4d4d;
+        }
+
+        /* Hero Container */
+        .hero {
+            max-width: 1200px;
+            margin: auto;
+            width: 100%;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        /* Hero Left Content */
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            max-width: 480px;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-content p {
+            font-size: 15px;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        .cta-btn {
+            background-color: #e52d27;
+            color: #ffffff;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #b31c18;
+        }
+
+        /* Hero Right Image */
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Responsive Breakpoint for Mobile Devices */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 50px;
+            }
+
+            .hero-content {
+                align-items: center;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-icon"></div>
+            <span class="logo-text">HM Burger</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Best Burgers in town</h1>
+            <p>Craving a burger that hits different? At HM Burger, we stack juicy, flame-grilled patties with fresh lettuce, ripe tomatoes, melted cheese, and our secret HM sauce — all inside a soft, toasted sesame bun. Made fresh daily, right here in Karachi. One bite and you'll know why we're the town's favorite.</p>
+            <a href="#menu" class="cta-btn">check out menu</a>
+        </div>
+        <div class="hero-image">
+            <!-- Replace source URL with your actual burger image path -->
+            <img src="../cheese burger.jpg"alt="Delicious Gourmet Burger">
+        </div>
+      
+<div class="delivery-container" style="background-color: #111; padding: 25px; border-radius: 8px; max-width: 480px; margin-top: 20px; border: 1px solid #333;">
+    <h3 style="font-size: 18px; margin-bottom: 12px; color: #ff4d4d;">⚡ Fast Delivery Across Karachi</h3>
+    
+    <!-- Zone Selector Dropdown -->
+    <label for="delivery-zone" style="font-size: 12px; color: #aaa; text-transform: uppercase; display: block; margin-bottom: 5px;">Select Your Area:</label>
+    <select id="delivery-zone" style="width: 100%; padding: 10px; background: #222; color: #fff; border: 1px solid #444; border-radius: 4px; margin-bottom: 15px; font-size: 14px;">
+        <option value="dha-clifton">DHA & Clifton (30-45 mins)</option>
+        <option value="gulshan-johar">Gulshan-e-Iqbal & Gulistan-e-Johar (40-50 mins)</option>
+        <option value="pechs-smchs">PECHS & SMCHS (35-45 mins)</option>
+        <option value="nazimabad">North Nazimabad & Federal B Area (45-55 mins)</option>
+    </select>
+
+    
+    <a href="https://wa.me." 
+       target="_blank" 
+       class="cta-btn" 
+       style="display: inline-block; text-align: center; width: 100%; background-color: #25D366; color: white; padding: 12px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 15px;">
+       💬 Order Instantly via WhatsApp
+    </a>
+    
+    <p style="font-size: 12px; color: #888; text-align: center; margin-top: 10px;">
+        Or call our Karachi hotline: <strong style="color: #fff;">021-111-BURGER</strong>
+    </p>
+</div>
+
+    </main>
+
+</body>
+</html>
